@@ -1,24 +1,90 @@
-<div id="header">
-    <div class="container-fluid">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">   
-        
-  
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" [routerLink]="['home']">Trang chủ </a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" [routerLink]="['create-event']">create-event</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" [routerLink]="['view-event']">view-event </a>
-            </ul>
-            
+<style>
+  /*! CSS Used from: http://themes.halothemes.com/marketplace/shopify-ella-ldp/assets/libs/bootstrap/css/bootstrap.min.css */
+*,::after,::before{box-sizing:border-box;}
+header{display:block;}
+h1{margin-top:0;margin-bottom:.5rem;}
+ul{margin-top:0;margin-bottom:1rem;}
+a{color:#007bff;text-decoration:none;background-color:transparent;-webkit-text-decoration-skip:objects;}
+a:hover{color:#0056b3;text-decoration:underline;}
+img{vertical-align:middle;border-style:none;}
+button{border-radius:0;}
+button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color;}
+button{margin:0;font-family:inherit;font-size:inherit;line-height:inherit;}
+button{overflow:visible;}
+button{text-transform:none;}
+button,html [type=button]{-webkit-appearance:button;}
+[type=button]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none;}
+h1{margin-bottom:.5rem;font-family:inherit;font-weight:500;line-height:1.2;color:inherit;}
+h1{font-size:2.5rem;}
+
+@media print{
+*,::after,::before{text-shadow:none!important;box-shadow:none!important;}
+a:not(.btn){text-decoration:underline;}
+img{page-break-inside:avoid;}
+.container{min-width:992px!important;}
+}
+html *{outline:none!important;}
+*,::after,::before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+span,h1{letter-spacing:0.02rem;}
+a{position:relative;letter-spacing:0.02rem;color:#8b919f;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-ms-transition:all .3s ease;transition:all .3s ease;text-decoration:none;}
+a:hover,a:focus{text-decoration:none;outline:none;}
+img{max-width:100%;height:auto;border:none;-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-ms-transition:all .3s ease-in-out;transition:all .3s ease-in-out;}
+ul{list-style:none;margin:0;padding:0;}
+.button{color:#141c34;display:inline-block;font-size:16px;height:60px;font-weight:700;padding:0 35px;line-height:60px;border-radius:3px;letter-spacing:0.02rem;text-transform:uppercase;background-color:#ffffff;border:1px solid #ced0d6;box-shadow:0 1px 3px 1px rgba(0,0,0,0.075);}
+.button:hover,.button:focus,.button:active{color:#141c34;border-color:#ced0d6;background-color:#ffffff;}
+.button.button-transparent{color:#ffffff;box-shadow:none;border:2px solid #ffffff;background-color:transparent;}
+.button.button-transparent:hover,.button.button-transparent:focus,.button.button-transparent:active{color:#141c34;border-color:#ffffff;background-color:#ffffff;}
+#nav-menu-icon{cursor:pointer;}
+.icon-nav{border:none;outline:none;padding:12px 0;display:block;text-align:center;cursor:pointer;background-color:rgba(255, 255, 255, 0);}
+.icon-nav:focus{outline:none;}
+.icon-nav .icon-line{pointer-events:none;position:relative;}
+.icon-nav .icon-line,.icon-nav .icon-line:before,.icon-nav .icon-line:after{display:block;width:30px;height:3px;margin:3px 0;background-color:#141c34;}
+.icon-nav .icon-line:before,.icon-nav .icon-line:after{position:absolute;left:0;right:0;content:"";}
+.icon-nav .icon-line:before{top:-11px;}
+.icon-nav .icon-line:after{bottom:-11px;}
+.header{color:#8b919f;padding:35px 0;position:relative;background-color:#ffffff;transition:all 0.3s ease;}
+.navPage-container{display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;}
+.navPage-left .item{display:inline-block;vertical-align:middle;}
+.navPage-left .item + .item{margin-left:50px;}
+.header .nav-logo{margin:0;}
+.header .nav-logo img{max-width:200px;}
+.header .main-menu{position:relative;}
+.header .main-menu .menu-item{font-size:16px;display:inline-block;vertical-align:middle;}
+.header .main-menu .menu-item + .menu-item{margin-left:35px;}
+.header .main-menu .menu-item a{font-size:16px;display:block;color:#8b919f;padding:13px 0;font-weight:400;letter-spacing:.023em;text-transform:capitalize;font-family:'Poppins', sans-serif;}
+
+</style>
+<header class="header header-transparent">
+  <div class="container navPage-container">
+      <div class="navPage-left">
+
+          <div class="item">
+              <h1 class="nav-logo">
+                  <a href="#" title="Product Filter Logo">
+                      <img src="https://ithutech.github.io/doan/images/logo.png" alt="logo">
+                  </a>
+              </h1>
           </div>
-        </nav>
+          <div class="item">
+              <ul class="main-menu">
+                  <li class="menu-item">
+                      <a href="./home" title="Homes">
+                          <span>Trang Chủ</span>
+                      </a>
+                  </li>
+                  <li class="menu-item">
+                      <a href="./create-event" title="Page Layouts">
+                          <span>Tạo Sự Kiện</span>
+                      </a>
+                  </li>
+                  <li class="menu-item">
+                      <a href="./view-event" title="Features">
+                          <span>Xem Sự Kiện</span>
+                      </a>
+                  </li>
+            
+              </ul>
+          </div>
       </div>
-    </div>
   </div>
-  
+</header>
