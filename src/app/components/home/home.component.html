@@ -9,7 +9,7 @@
     </div>
   </div>
   
-  <div class="row">Xuất dữ liệu từ Google Sheets: 
+  <!-- <div class="row">Xuất dữ liệu từ Google Sheets: 
   <ul>
   <li>{{evID | json}}</li>
   <li>{{evTitle | json}}</li>
@@ -18,8 +18,8 @@
   <li>{{evDateCreate | json}}</li>
   <li>{{evStatus | json}}</li>
   </ul>
-  </div>
-  <div ng-bind-html="evHTML"></div>
+  </div> -->
+  <div [innerHTML]="evContent"></div>
   </div></section>
     <section class="section-space-default bg-light">
        <div class="container zoom-gallery menu-list-wrapper">

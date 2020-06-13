@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
    var eventID = location.search.split("=")[1];
    if(this.getLastWord(eventID) != ""){
-    this.doGetEV(eventID);
+    
    }
   }
   evID : any;
@@ -34,10 +34,10 @@ export class HomeComponent implements OnInit {
   evDateCreate:any;
   evStatus :any;
 
-
-  doGetEV(id){
+<<<<<<< HEAD
+  doGetEV(){
     console.log("GET EVENT");
-    let url = `${this.apiRoot}=getEventID&evID=`+id;
+    let url = `${this.apiRoot}=getEvent`;
     const httpOptions = {
       params: new HttpParams().set("foo", "moo").set("limit", "25")
     };
@@ -52,6 +52,12 @@ export class HomeComponent implements OnInit {
       });
 
   }
+=======
+  ngOnInit() {
+    
+  }
+
+>>>>>>> refs/remotes/origin/master
   doGET() {
     console.log("GET");
     let url = `${this.apiRoot}=getEventID`;
