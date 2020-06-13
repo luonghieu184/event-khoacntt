@@ -23,6 +23,10 @@ export class HomeComponent  {
   evDateCreate:any;
   evStatus :any;
 
+  ngOnInit() {
+    
+  }
+
   doGET() {
     console.log("GET");
     let url = `${this.apiRoot}=getEventID`;
