@@ -20,6 +20,7 @@ export class ViewEventComponent implements OnInit {
     return nSpace[nSpace.length - 1];
   } 
   ngOnInit() {
+    
    var eventID = location.search.split("=")[1];
    var getEventID = this.getLastWord(eventID);
    if(getEventID != ""){

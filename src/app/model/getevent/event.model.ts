@@ -5,4 +5,5 @@ export class Event {
     evContent:String;
     evDateCreate:String;
     evStatus :String;
+    evUrl:String;
 }
