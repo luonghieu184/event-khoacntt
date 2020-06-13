@@ -1,67 +1,16 @@
 <app-header></app-header>
 <div class="container">
-   
-   <table class="table table-hover">
-      <thead class="thead-dark">
-          <tr>
-              <th scope="col">STT</th>
-              <th scope="col">ID</th>
-              <th scope="col">Title</th>
-              <th scope="col">Description</th>
-              <th></th>
-              <th></th>
-          </tr> 
-      </thead>
-      <tbody>
-          <tr *ngFor="let evt of eventService.event , let i = index">
-              <th scope="row"> {{i + 1}}</th>
-              <td>{{evt.evID}}</td>
-              <td>{{evt.evTitle}}</td>
-              <td>{{evt.evDescription}}</td>                     
-          </tr>
-      </tbody>
-  </table>
 
    <div class="row">
-      <div class="col">
-         <div   class="card" style="width: 18rem;" style="padding:10px;">
+      <div *ngFor="let evt of eventService.event" class="col-md-4">
+         <div  class="card" style="width: 18rem;" style="padding:10px;">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRvKWA6GzeJed4pt4FvvL9FIW2giyzhCXpGv46TGBxGzForlzM6&usqp=CAU" class="card-img-top" alt="..." style="height: 250px;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div  class="card-body">
+              <h5 class="card-title">{{evt.evTitle}}</h5>
+              <p class="card-text">{{evt.evDescription}}</p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
-      </div>
-      <div class="col-4">
-         <div class="card" style="width: 18rem;" style="padding:10px;">
-            <img src="https://file1.hutech.edu.vn/file/editor/homepage1/0.Banner%20h%E1%BB%99i%20th%E1%BA%A3o.png" class="card-img-top" alt="..." style="height: 250px;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-      </div>    
-      <div class="col-4">
-         <div class="card" style="width: 18rem;" style="padding:10px;">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQYCv8gIMw8MDT1_ppM0ejvZegSuGLaLnLQK_APpRye1DVQG34d&usqp=CAU" class="card-img-top" alt="..." style="height: 250px;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-      </div>    
-      <div class="col-4">
-         <div class="card" style="width: 18rem;" style="padding:10px;">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTjvxka3nRJlUMNhL35iHep0Vaeeq8aejxFXmAqcIWqzX07QJ3Z&usqp=CAU" class="card-img-top" alt="..." style="height: 250px;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-      </div>               
+      </div>      
    </div>
 </div>
