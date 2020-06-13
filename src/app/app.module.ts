@@ -17,7 +17,7 @@ import { ViewEventComponent } from './components/view-event/view-event.component
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    CreateEventComponent
+    CreateEventComponent,
     ViewEventComponent
   ],
   imports: [

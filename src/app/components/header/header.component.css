@@ -1,0 +1,51 @@
+.container-fluid{
+    width: 100%;
+    padding: 0px;
+     background-image: linear-gradient(
+        to right bottom ,
+        rgba(126,213,111,1),
+        rgba(40,180,131,1)
+      );
+      position: fixed;
+      z-index: 10000;
+      top:0;
+}
+.hr{
+    margin: 0;
+}
+.nav-link{
+    color: white !important;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.nav-link:hover{
+    color:orange !important;
+}
+.nav-item{
+    margin-left: 20px;
+}
+
+.btn{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid white;
+}
+.btn:hover{
+    border: 2px solid orange;
+    transition-delay: 0ms;
+}
+.btn:hover a {
+    color: orange;
+    text-decoration: none;
+}
+.btn a{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+
