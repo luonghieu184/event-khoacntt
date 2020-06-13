@@ -14,7 +14,7 @@
   <li>{{evID | json}}</li>
   <li>{{evTitle | json}}</li>
   <li>{{evDescription | json}}</li>
-  <li>{{evContent}}</li>
+  <li [innerHTML]="evContent"></li>
   <li>{{evDateCreate | json}}</li>
   <li>{{evStatus | json}}</li>
   </ul>

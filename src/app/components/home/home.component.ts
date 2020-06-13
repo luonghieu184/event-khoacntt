@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit {
   evDateCreate:any;
   evStatus :any;
 
+
   doGetEV(){
     console.log("GET EVENT");
     let url = `${this.apiRoot}=getEvent`;
@@ -52,6 +53,23 @@ export class HomeComponent implements OnInit {
 
   }
   doGET() {
+    console.log("GET");
+    let url = `${this.apiRoot}=getEventID`;
+    const httpOptions = {
+      params: new HttpParams().set("foo", "moo").set("limit", "25")
+    };
+    this.http.get(url, httpOptions).subscribe(
+      (res: any) => {console.log(res)
+        this.evID = res.evID; 
+        this.evTitle = res.evTitle; 
+        this.evDescription = res.evDescription; 
+        this.evContent = res.evContent; 
+        this.evDateCreate = res.evDateCreate; 
+        this.evStatus = res.evStatus; 
+      });
+  }
+
+  doGETs() {
     console.log("GET");
     let url = `${this.apiRoot}=getEvent`;
     const httpOptions = {
